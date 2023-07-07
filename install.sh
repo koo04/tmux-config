@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd -
+
 # update self
 echo "Checking for updates..."
 git pull
