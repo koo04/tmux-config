@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd -
+cd "$(dirname "$(readlink -f "$0")")"
 
 # update self
 echo "Checking for updates..."
