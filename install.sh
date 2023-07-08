@@ -19,7 +19,7 @@ fi
 XDG_CONFIG_HOME=${XDG_CONFIG_HOME:=$HOME/.config}
 
 if [ ! -d "$XDG_CONFIG_HOME/tmux" ]; then
-  mkdir -p "$XDG_CONFIG_HOME/tmux"
+  mkdir -p $XDG_CONFIG_HOME/tmux
 fi
 
 # link ./tmux.conf to $XDG_CONFIG_HOME/tmux/tmux.conf
@@ -29,5 +29,5 @@ fi
 
 # link ./tmux.conf to $HOME/.tmux.conf
 if [ ! -f "$HOME/.tmux.conf" ]; then
-  ln -s "$PWD/tmux.conf" "$HOME/.tmux.conf"
+  ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
 fi
